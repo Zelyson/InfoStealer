@@ -51,25 +51,43 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="InfoStealer.cpp">
+    <ClCompile Include="src\InfoStealer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="persistance.cpp">
+    <ClCompile Include="src\persistance\persistance.cpp">
       <Filter>Source Files\persistance</Filter>
     </ClCompile>
-    <ClCompile Include="initialize.cpp">
+    <ClCompile Include="src\modules\initialize.cpp">
       <Filter>Source Files\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\browser\browser.cpp">
+      <Filter>Source Files\modules\browser</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\discord\discord.cpp">
+      <Filter>Source Files\modules\discord</Filter>
+    </ClCompile>
+    <ClCompile Include="src\modules\passwords\passwords.cpp">
+      <Filter>Source Files\modules\passwords</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="persistance.hpp">
-      <Filter>Header Files\persistance</Filter>
-    </ClInclude>
-    <ClInclude Include="errorMessages.hpp">
+    <ClInclude Include="include\errorMessages.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="initialize.hpp">
+    <ClInclude Include="include\persistance\persistance.hpp">
+      <Filter>Header Files\persistance</Filter>
+    </ClInclude>
+    <ClInclude Include="include\modules\initialize.hpp">
       <Filter>Header Files\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="include\modules\browser\browser.hpp">
+      <Filter>Header Files\modules\browser</Filter>
+    </ClInclude>
+    <ClInclude Include="include\modules\discord\discord.hpp">
+      <Filter>Header Files\modules\discord</Filter>
+    </ClInclude>
+    <ClInclude Include="include\modules\passwords\passwords.hpp">
+      <Filter>Header Files\modules\passwords</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

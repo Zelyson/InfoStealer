@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "initialize.hpp"
+#include "../include/modules/initialize.hpp"
 
 int main(int argc, char const* argv[]) {
     initialize::init(argv);

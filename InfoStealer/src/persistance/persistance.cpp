@@ -9,8 +9,8 @@
 #include <fstream>
 #include <stdexcept>
 
-#include "persistance.hpp"
-#include "errorMessages.hpp"
+#include "../../include/persistance/persistance.hpp"
+#include "../../include/errorMessages.hpp"
 
 persistance::persistance(char const* argv[]) {
     wchar_t* localAppData = 0;
@@ -21,7 +21,7 @@ persistance::persistance(char const* argv[]) {
     CoTaskMemFree(static_cast<void*>(localAppData));
 }
 persistance::~persistance() {
-    delete(&this->fullPath);
+    this->fullPath.clear();
 }
 
  /**
