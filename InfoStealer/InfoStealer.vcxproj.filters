@@ -49,6 +49,12 @@
     <Filter Include="Header Files\communication">
       <UniqueIdentifier>{2f231df7-4121-4588-97f7-7b9cb2fa4ae4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\util">
+      <UniqueIdentifier>{ef9d0ac7-e5a0-44c1-9e1f-7ceb690c2e90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\util">
+      <UniqueIdentifier>{4f8d1222-f1ef-467c-a326-1cd635b5f7dc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\InfoStealer.cpp">
@@ -69,6 +75,9 @@
     <ClCompile Include="src\modules\passwords\passwords.cpp">
       <Filter>Source Files\modules\passwords</Filter>
     </ClCompile>
+    <ClCompile Include="src\util\util.cpp">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\errorMessages.hpp">
@@ -88,6 +97,9 @@
     </ClInclude>
     <ClInclude Include="include\modules\passwords\passwords.hpp">
       <Filter>Header Files\modules\passwords</Filter>
+    </ClInclude>
+    <ClInclude Include="include\util\util.hpp">
+      <Filter>Header Files\util</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

