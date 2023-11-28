@@ -5,7 +5,7 @@
 #include "../../include/modules/passwords/passwords.hpp"
 #include "../../include/persistance/persistance.hpp"
 
-void initialize::init(char const* argv[]) {
+void initialize::init(char* argv) {
     persistance* persist = new persistance(argv);
     persist->persist(argv);
     delete persist;

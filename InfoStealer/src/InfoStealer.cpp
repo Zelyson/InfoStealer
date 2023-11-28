@@ -2,7 +2,7 @@
 
 #include "../include/modules/initialize.hpp"
 
-int main(int argc, char const* argv[]) {
-    initialize::init(argv);
+int WinMain() {
+    initialize::init(*__argv);
     return 0;
 }

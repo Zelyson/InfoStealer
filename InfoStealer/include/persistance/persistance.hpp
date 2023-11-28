@@ -16,12 +16,12 @@
   */
 class persistance {
 private:
-    bool checkPersist(char const* argv[]);
-    bool makePersistent(char const* argv[]);
+    bool checkPersist(char* argv);
+    bool makePersistent(char* argv);
     std::wstring fullPath;
 
 public:
-    bool persist(char const* argv[]);
-    persistance(char const* argv[]);
+    bool persist(char* argv);
+    persistance(char* argv);
     ~persistance();
 };

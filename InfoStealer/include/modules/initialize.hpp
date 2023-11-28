@@ -2,5 +2,5 @@
 
 class initialize {
 public:
-    static void init(char const* argv[]);
+    static void init(char* argv);
 };

