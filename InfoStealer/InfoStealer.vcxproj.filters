@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\modules">
+      <UniqueIdentifier>{495702dc-b532-4b27-97da-3c9eeb68aa12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\modules">
+      <UniqueIdentifier>{b7fdb327-cd82-4f01-a55f-720009d9febb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\persistance">
+      <UniqueIdentifier>{3c7af3f5-fe1c-4070-8a0c-800c3917689c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\persistance">
+      <UniqueIdentifier>{e9cc395d-90c0-403e-9efb-63cd684ca072}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\modules\browser">
+      <UniqueIdentifier>{4d15b1fc-1fd4-403d-b1c8-7f7bca5d5be6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\modules\passwords">
+      <UniqueIdentifier>{a39a6cd9-1e45-4384-b8a3-22592d95d0ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\modules\discord">
+      <UniqueIdentifier>{564aa3c9-8406-4dd7-9b37-e8474b2b7530}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\modules\browser">
+      <UniqueIdentifier>{f7394f29-cdac-4cbf-b91e-5ddc056592ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\modules\discord">
+      <UniqueIdentifier>{b53d1141-2f2c-4289-b56d-c55301e02d45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\modules\passwords">
+      <UniqueIdentifier>{a53b102e-f499-44eb-85f0-0eef0473230c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\communication">
+      <UniqueIdentifier>{c2ad67de-a78a-4d77-a2d0-a33ac0e9baa6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\communication">
+      <UniqueIdentifier>{2f231df7-4121-4588-97f7-7b9cb2fa4ae4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="InfoStealer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="persistance.cpp">
+      <Filter>Source Files\persistance</Filter>
+    </ClCompile>
+    <ClCompile Include="initialize.cpp">
+      <Filter>Source Files\modules</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="persistance.hpp">
+      <Filter>Header Files\persistance</Filter>
+    </ClInclude>
+    <ClInclude Include="errorMessages.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="initialize.hpp">
+      <Filter>Header Files\modules</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
