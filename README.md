@@ -23,10 +23,13 @@ as well as:
 is also planned, although idk how far i will go ;).
 
 ## Misc
-This project is a continuation of [this](https://github.com/Zelyson/MALWARE-InfoStealer) project
-which ended due to a lack of experience and motivation (which hopefully wont be the case for this one \:)).
+This project is a continuation of [this](https://github.com/Zelyson/MALWARE-InfoStealer) project which ended due to a lack of experience  
+and motivation (which hopefully wont be the case for this one \:)).  
+Also, I'm not a C++ developer and this is my first 'real' project so if I've made some  
+unforgivable mistakes which would land me in C-hell just send over a pull request ;P.
 - Created using Visual Studio Community 2022 ver. 17.8.1
 - As the program contains windows only functions, it can only be used on windows machines
+- This program is licensed under the [GPL v3](./License.md) (also here: [website](https://www.gnu.org/licenses/gpl-3.0))
 
 Have fun!
 \- Sebastian
