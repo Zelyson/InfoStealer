@@ -29,7 +29,7 @@ Also, I'm not a C++ developer and this is my first 'real' project so if I've mad
 unforgivable mistakes which would land me in C-hell just send over a pull request ;P.
 - Created using Visual Studio Community 2022 ver. 17.8.1
 - As the program contains windows only functions, it can only be used on windows machines
-- This program is licensed under the [GPL v3](./License.md) (also here: [website](https://www.gnu.org/licenses/gpl-3.0))
+- This program is licensed under the [GPL v3](./LICENSE.md) (also here: [website](https://www.gnu.org/licenses/gpl-3.0))
 
 Have fun!
 \- Sebastian
