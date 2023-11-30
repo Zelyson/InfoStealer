@@ -8,17 +8,17 @@ The goal of this project is to write malware which extracts and sends data to a 
 
 
 The extraction of:
-- discord token/cookies
-- browser tokens/cookies
-- different password related files
-- Browser Passwords and saved payments
-- Crypto wallets
+- [ ] discord token/cookies
+- [ ] browser tokens/cookies
+- [ ] different password related files
+- [ ] Browser Passwords and saved payments
+- [ ] Crypto wallets
 
 as well as:
-- a keylogger
-- persistance 
-- VM - checks
-- Antivirus evasion
+- [ ] a keylogger
+- [ ] persistance 
+- [ ] VM - checks
+- [ ] Antivirus evasion
 
 is also planned, although idk how far i will go ;).
 
