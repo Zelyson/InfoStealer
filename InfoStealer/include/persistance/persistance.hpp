@@ -10,19 +10,10 @@
 * along with this program. If not, see <https://www.gnu.org/licenses/gpl-3.0>.
 */
 
-
 #pragma once
-/**
- * @brief Checks if the program is persistent and if not installs itself to the system.
- * @file persistance.cpp
- * @author Sebastian Hasch
- * @date 27.11.2023
- */
 
 #include <iostream>
 #include <shlobj.h>
-
-
 
  /**
   * @brief Checks if the program is persistent and if not installs itself to the system.

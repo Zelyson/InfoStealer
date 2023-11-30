@@ -22,7 +22,6 @@
 #include <filesystem>
 #include <stdexcept>
 
-
 #include "../../include/persistance/persistance.hpp"
 #include "../../include/util/util.hpp"
 #include "../../include/errorMessages.hpp"

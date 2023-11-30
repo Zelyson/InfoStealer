@@ -133,22 +133,30 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\communication\comms.cpp" />
     <ClCompile Include="src\InfoStealer.cpp" />
     <ClCompile Include="src\modules\browser\browser.cpp" />
     <ClCompile Include="src\modules\discord\discord.cpp" />
     <ClCompile Include="src\modules\initialize.cpp" />
     <ClCompile Include="src\modules\passwords\passwords.cpp" />
     <ClCompile Include="src\persistance\persistance.cpp" />
+    <ClCompile Include="src\util\serialization.cpp" />
     <ClCompile Include="src\util\util.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\communication\comms.hpp" />
     <ClInclude Include="include\errorMessages.hpp" />
     <ClInclude Include="include\modules\browser\browser.hpp" />
     <ClInclude Include="include\modules\discord\discord.hpp" />
     <ClInclude Include="include\modules\initialize.hpp" />
     <ClInclude Include="include\modules\passwords\passwords.hpp" />
     <ClInclude Include="include\persistance\persistance.hpp" />
+    <ClInclude Include="include\util\serialization.hpp" />
     <ClInclude Include="include\util\util.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\LICENSE.md" />
+    <None Include="..\README.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

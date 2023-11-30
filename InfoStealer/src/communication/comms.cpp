@@ -10,12 +10,18 @@
 * along with this program. If not, see <https://www.gnu.org/licenses/gpl-3.0>.
 */
 
-#pragma once
 
-class passwords {
-public:
-    passwords();
-    ~passwords();
-    static void dispatch();
-private:
-};
+#include "../../include/communication/comms.hpp"
+#include "../../include/util/util.hpp"
+
+comms::comms() {
+
+}
+
+comms::~comms() {
+
+}
+
+int comms::send(util::Packet packet) {
+	return 0;
+}

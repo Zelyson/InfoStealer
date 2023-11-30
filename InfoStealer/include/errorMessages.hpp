@@ -10,11 +10,8 @@
 * along with this program. If not, see <https://www.gnu.org/licenses/gpl-3.0>.
 */
 
-
-#ifndef ERROR_MESSAGES_H
-#define ERROR_MESSAGES_H
+#pragma once
 
 namespace errorMessages {
     const char* UNKNOWN_ERROR{ "An unknown error has occured." };
 }
-#endif

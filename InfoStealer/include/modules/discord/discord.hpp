@@ -10,9 +10,7 @@
 * along with this program. If not, see <https://www.gnu.org/licenses/gpl-3.0>.
 */
 
-
-#ifndef DISCORD_H
-#define DISCORD_H
+#pragma once
 
 class discord {
 public:
@@ -21,6 +19,3 @@ public:
     static void dispatch();
 private:
 };
-
-
-#endif

@@ -19,9 +19,9 @@
 #include "../../include/persistance/persistance.hpp"
 
 void initialize::init(char* argv) {
-    persistance* persist = new persistance(argv);
+    /*persistance* persist = new persistance(argv);
     persist->persist(argv);
-    delete persist;
+    delete persist;*/
 
     browser* bro = new browser();
     discord* dis = new discord();

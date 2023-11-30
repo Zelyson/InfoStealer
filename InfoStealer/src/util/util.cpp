@@ -13,10 +13,12 @@
 
 #include <cstring>
 #include <fstream>
+#include <sstream>   
+#include <string> 
+#include <vector> 
+
 
 #include "../../include/util/util.hpp"
-
-struct util::File file;
 
 bool util::filecmp(util::File file1, util::File file2) {
     if (file1.size != file2.size)
@@ -49,4 +51,19 @@ util::File util::getFile(const char* path) {
     fileStream.close();
 
     return file;
+}
+
+util::Packet util::getPacket(const char* path) {
+    util::Packet packet{};
+    packet.file = util::getFile(path);
+
+    std::string strData(path);
+    const char separator = '\\';
+    std::stringstream streamData(strData);
+    std::string val;
+    while (std::getline(streamData, val, separator)) {
+    }
+    packet.name = val;
+
+    return packet;
 }

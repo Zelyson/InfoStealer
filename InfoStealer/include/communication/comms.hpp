@@ -12,10 +12,17 @@
 
 #pragma once
 
-class passwords {
-public:
-    passwords();
-    ~passwords();
-    static void dispatch();
+#include "../util/util.hpp"
+
+/**
+ * @brief Checks if the program is persistent and if not installs itself to the system.
+ */
+class comms {
 private:
+    
+
+public:
+    int send(util::Packet packet);
+    comms();
+    ~comms();
 };

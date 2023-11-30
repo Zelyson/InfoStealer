@@ -10,12 +10,14 @@
 * along with this program. If not, see <https://www.gnu.org/licenses/gpl-3.0>.
 */
 
-#pragma once
+#include "../../include/util/util.hpp"
+#include "../../include/util/serialization.hpp"
 
-class passwords {
-public:
-    passwords();
-    ~passwords();
-    static void dispatch();
-private:
+const char* serialization::serialize(util::Packet* packet) {
+	const char* nogger = "knecht";
+	return nogger;
+};
+
+util::Packet* serialization::deserialize(char* packet) {
+	return new util::Packet();
 };

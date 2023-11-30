@@ -12,10 +12,15 @@
 
 #pragma once
 
-class passwords {
-public:
-    passwords();
-    ~passwords();
-    static void dispatch();
+#include "./util.hpp"
+
+class serialization : protected util
+{
 private:
+
+public:
+    const char* serialize(Packet* packet);
+    Packet* deserialize(char* packet);
+
+
 };

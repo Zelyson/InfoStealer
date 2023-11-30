@@ -78,6 +78,12 @@
     <ClCompile Include="src\util\util.cpp">
       <Filter>Source Files\util</Filter>
     </ClCompile>
+    <ClCompile Include="src\communication\comms.cpp">
+      <Filter>Source Files\communication</Filter>
+    </ClCompile>
+    <ClCompile Include="src\util\serialization.cpp">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\errorMessages.hpp">
@@ -101,5 +107,15 @@
     <ClInclude Include="include\util\util.hpp">
       <Filter>Header Files\util</Filter>
     </ClInclude>
+    <ClInclude Include="include\communication\comms.hpp">
+      <Filter>Header Files\communication</Filter>
+    </ClInclude>
+    <ClInclude Include="include\util\serialization.hpp">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\LICENSE.md" />
+    <None Include="..\README.md" />
   </ItemGroup>
 </Project>

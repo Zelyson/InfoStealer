@@ -10,10 +10,9 @@
 * along with this program. If not, see <https://www.gnu.org/licenses/gpl-3.0>.
 */
 
+#pragma once
 
-#ifndef FILE_H
-#define FILE_H
-
+#include <iostream>
 
 class util
 {
@@ -27,13 +26,14 @@ struct File
 struct Packet
 {
     File file;
-    char* name;
+    std::string name;
 
 };
     static bool filecmp(util::File file1, util::File file2);
     static File getFile(std::wstring path);
     static File getFile(const char* path);
+    static Packet getPacket(const char* path);
+
 private:
 
 };
-#endif
