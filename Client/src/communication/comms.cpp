@@ -10,17 +10,18 @@
 * along with this program. If not, see <https://www.gnu.org/licenses/gpl-3.0>.
 */
 
-#pragma once
 
-#include "./util.hpp"
+#include "../../include/communication/comms.hpp"
+#include "../../include/util/util.hpp"
 
-class serialization : protected util
-{
-private:
+comms::comms() {
 
-public:
-    const char* serialize(Packet* packet);
-    Packet* deserialize(char* packet);
+}
 
+comms::~comms() {
 
-};
+}
+
+int comms::send(util::Packet& packet) {
+	return 0;
+}

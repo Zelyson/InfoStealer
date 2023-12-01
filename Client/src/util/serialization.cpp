@@ -10,18 +10,15 @@
 * along with this program. If not, see <https://www.gnu.org/licenses/gpl-3.0>.
 */
 
+#include <cstring>
 
-#include "../../include/communication/comms.hpp"
 #include "../../include/util/util.hpp"
+#include "../../include/util/serialization.hpp"
 
-comms::comms() {
+const char* serialization::serialize(util::Packet& packet) {
+	return (const char*) &packet;
+};
 
-}
-
-comms::~comms() {
-
-}
-
-int comms::send(util::Packet packet) {
-	return 0;
-}
+util::Packet* serialization::deserialize(const char* packet) {
+	return (util::Packet*) packet;
+};

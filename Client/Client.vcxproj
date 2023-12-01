@@ -134,7 +134,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\communication\comms.cpp" />
-    <ClCompile Include="src\InfoStealer.cpp" />
+    <ClCompile Include="src\Client.cpp" />
     <ClCompile Include="src\modules\browser\browser.cpp" />
     <ClCompile Include="src\modules\discord\discord.cpp" />
     <ClCompile Include="src\modules\initialize.cpp" />

