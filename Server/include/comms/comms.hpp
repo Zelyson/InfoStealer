@@ -12,7 +12,12 @@
 
 #pragma once
 
-#include "../util/util.hpp"
+#include <winsock2.h>
+#pragma comment(lib,"WS2_32")
+
+
+#include "../util/srvutil.hpp"
+#include "../../../Client/include/util/util.hpp"
 
 /**
  * @brief Checks if the program is persistent and if not installs itself to the system.
@@ -20,9 +25,12 @@
 class comms {
 private:
     SOCKET server;
+    SOCKADDR_IN client_addr;
+    int client_addr_size;
+    void recieve(SOCKET client, char* buffer);
 
 public:
-    int send_c(util::Packet& packet);
     comms();
     ~comms();
+    int start();
 };

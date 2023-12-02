@@ -13,10 +13,42 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\comms">
+      <UniqueIdentifier>{ea2aa89d-f5ad-46eb-bd71-5b4dd4b8be0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\util">
+      <UniqueIdentifier>{9167ed56-45bc-4105-9244-35b37fa75308}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\comms">
+      <UniqueIdentifier>{91dfb758-a90b-4130-b822-9b4fecfb389f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\util">
+      <UniqueIdentifier>{7c816a77-1f0b-4545-b18d-c0af80249a0f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Server.cpp">
+    <ClCompile Include="src\Server.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\comms\comms.cpp">
+      <Filter>Source Files\comms</Filter>
+    </ClCompile>
+    <ClCompile Include="src\util\srvutil.cpp">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="src\initialize.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\comms\comms.hpp">
+      <Filter>Header Files\comms</Filter>
+    </ClInclude>
+    <ClInclude Include="include\util\srvutil.hpp">
+      <Filter>Header Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="include\initialize.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

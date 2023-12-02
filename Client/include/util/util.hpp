@@ -19,21 +19,19 @@ class util
 public:
 struct File
 {
-    char* buffer;
+    char buffer[1024*1024*1];
     size_t size;
 };
 
 struct Packet
 {
     File file;
-    std::string name;
-
+    char type[64];
 };
-    static bool filecmp(util::File& file1, util::File& file2);
-    static File getFile(std::wstring& path);
-    static File getFile(const char* path);
-    static Packet getPacket(const char* path);
+    static bool filecmp(util::File* file1, util::File* file2);
+    static File* getFile(std::wstring& path);
+    static File* getFile(const char* path);
+    static Packet* getPacket(const char* path);
 
 private:
-
 };

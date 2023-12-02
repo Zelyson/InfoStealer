@@ -20,42 +20,49 @@
 
 #include "../../include/util/util.hpp"
 
-bool util::filecmp(util::File& file1, util::File& file2) {
-    if (file1.size != file2.size)
+bool util::filecmp(util::File* file1, util::File* file2) {
+    if (file1->size != file2->size)
         return false;
-    int a = memcmp(file1.buffer, file2.buffer, file1.size);
+    int a = memcmp(file1->buffer, file2->buffer, file1->size);
     return a;
 }
 
-util::File util::getFile(std::wstring& path) {
-    util::File file{};
+util::File* util::getFile(std::wstring& path) {
+    util::File *file = new util::File;
     std::ifstream fileStream(path, std::ios::binary);
     fileStream.seekg(0, std::ios::end);
-    file.size = fileStream.tellg();
+    file->size = fileStream.tellg();
     fileStream.seekg(0, std::ios::beg);
-    file.buffer = (char*)malloc(file.size);
-    fileStream.read(file.buffer, file.size);
+    char* file_ptr = (char*)malloc(file->size);
+    fileStream.read(file_ptr, file->size);
+
+    if (file_ptr != 0)
+        memcpy(file->buffer, file_ptr, sizeof(util::File::buffer));
+
     fileStream.close();
 
     return file;
 }
 
-util::File util::getFile(const char* path) {
-    util::File file{};
+util::File* util::getFile(const char* path) {
+    util::File *file = new util::File;
     std::ifstream fileStream(path, std::ios::binary);
     fileStream.seekg(0, std::ios::end);
-    file.size = fileStream.tellg();
+    file->size = fileStream.tellg();
     fileStream.seekg(0, std::ios::beg);
-    file.buffer = (char*)malloc(file.size);
-    fileStream.read(file.buffer, file.size);
+    char* file_ptr = (char*)malloc(file->size);
+    fileStream.read(file_ptr, file->size);
+    if (file_ptr != 0) 
+        memcpy(file->buffer, file_ptr, file->size);
+
     fileStream.close();
 
     return file;
 }
 
-util::Packet util::getPacket(const char* path) {
-    util::Packet packet{};
-    packet.file = util::getFile(path);
+util::Packet* util::getPacket(const char* path) {
+    util::Packet* packet = new util::Packet;
+    packet->file = *util::getFile(path);
 
     std::string strData(path);
     const char separator = '\\';
@@ -63,7 +70,7 @@ util::Packet util::getPacket(const char* path) {
     std::string val;
     while (std::getline(streamData, val, separator)) {
     }
-    packet.name = val;
+    memcpy(packet->type, val.c_str(), val.size());
 
     return packet;
 }

@@ -18,6 +18,17 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\comms\comms.cpp" />
+    <ClCompile Include="src\initialize.cpp" />
+    <ClCompile Include="src\Server.cpp" />
+    <ClCompile Include="src\util\srvutil.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\comms\comms.hpp" />
+    <ClInclude Include="include\initialize.hpp" />
+    <ClInclude Include="include\util\srvutil.hpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -126,9 +137,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="Server.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

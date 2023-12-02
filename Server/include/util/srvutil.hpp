@@ -12,17 +12,29 @@
 
 #pragma once
 
-#include "../util/util.hpp"
+#include <iostream>
+#include "../../../Client/include/util/util.hpp"
 
-/**
- * @brief Checks if the program is persistent and if not installs itself to the system.
- */
-class comms {
-private:
-    SOCKET server;
-
+class srvutil
+{
 public:
-    int send_c(util::Packet& packet);
-    comms();
-    ~comms();
+struct File
+{
+    char* buffer;
+    size_t size;
+};
+
+struct Packet
+{
+    File file;
+    std::string name;
+
+};
+    static bool filecmp(util::File& file1, util::File& file2);
+    static File getFile(std::wstring& path);
+    static File getFile(const char* path);
+    static Packet getPacket(const char* path);
+
+private:
+
 };
