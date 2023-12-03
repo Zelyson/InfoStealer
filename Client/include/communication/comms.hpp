@@ -12,10 +12,12 @@
 
 #pragma once
 
+#include <WinSock2.h>
+
 #include "../util/util.hpp"
 
 /**
- * @brief Checks if the program is persistent and if not installs itself to the system.
+ * @brief Manages communication between client and server.
  */
 class comms {
 private:
