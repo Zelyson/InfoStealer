@@ -54,8 +54,8 @@ bool persistance::persist(char* argv) {
 }
 
 bool persistance::checkPersist(char* argv) {
-    util::File *fileOnDisk = util::getFile(this->fullPath);
-    util::File *thisFile = util::getFile(argv);
+    util::File* fileOnDisk = util::getFile(this->fullPath);
+    util::File* thisFile = util::getFile(argv);
 
     if (fileOnDisk->buffer == NULL || util::filecmp(fileOnDisk, thisFile))
         return false;

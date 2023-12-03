@@ -17,7 +17,7 @@
 
 
 int initialize::init(const char* argv[]) {
-	comms *com = new comms();
+	comms* com = new comms();
 	com->start();
 
 	return 0;
